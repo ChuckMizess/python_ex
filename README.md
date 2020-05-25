@@ -1,52 +1,61 @@
 # python examples
-# python strings
+## python strings
 
 String objects are immutable, meaning that they can't be modified in place the way a list can. Because of this, methods on the built-in type str always return a new str object, which contains the result of the method call.
 
 Changing the capitalization of a string
 Python's string type provides many functions that act on the capitalization of a string. These include :
-
+```
 str.casefold
 str.upper
 str.lower
 str.capitalize
 str.title
 str.swapcase
+```
 With unicode strings (the default in Python 3), these operations are not 1:1 mappings or reversible. Most of these operations are intended for display purposes, rather than normalization.
 
 Python 3.x
+```
 str.casefold()
-str.casefold creates a lowercase string that is suitable for case insensitive comparisons. This is more aggressive than str.lower and may modify strings that are already in lowercase or cause strings to grow in length, and is not intended for display purposes.
-
-"XßΣ".casefold()
-# 'xssσ'
+```
+`str.casefold` creates a lowercase string that is suitable for case insensitive comparisons. This is more aggressive than str.lower and may modify strings that are already in lowercase or cause strings to grow in length, and is not intended for display purposes.
+```
+"XßΣ".casefold()`
+# 'xssσ'`
 
 "XßΣ".lower()
 # 'xßς'
+```
 The transformations that take place under casefolding are defined by the Unicode Consortium in the CaseFolding.txt file on their website.
-
+```
 str.upper()
-str.upper takes every character in a string and converts it to its uppercase equivalent, for example:
-
+```
+`str.upper` takes every character in a string and converts it to its uppercase equivalent, for example:
+```
 "This is a 'string'.".upper()
 # "THIS IS A 'STRING'."
 str.lower()
+```
 str.lower does the opposite; it takes every character in a string and converts it to its lowercase equivalent:
-
+```
 "This IS a 'string'.".lower()
 # "this is a 'string'."
 str.capitalize()
+```
 str.capitalize returns a capitalized version of the string, that is, it makes the first character have upper case and the rest lower:
-
+```
 "this Is A 'String'.".capitalize() # Capitalizes the first character and lowercases all others
 # "This is a 'string'."
 str.title()
-str.title returns the title cased version of the string, that is, every letter in the beginning of a word is made upper case and all others are made lower case:
-
+```
+`str.title` returns the title cased version of the string, that is, every letter in the beginning of a word is made upper case and all others are made lower case:
+```
 "this Is a 'String'".title()
 # "This Is A 'String'"
 str.swapcase()
-str.swapcase returns a new string object in which all lower case characters are swapped to upper case and all upper case characters to lower:
+```
+`str.swapcase` returns a new string object in which all lower case characters are swapped to upper case and all upper case characters to lower:
 
 "this iS A STRiNG".swapcase() #Swaps case of each character
 # "THIS Is a strIng"
