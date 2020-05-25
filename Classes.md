@@ -1,5 +1,5 @@
 
-##Introduction to classes
+## Introduction to classes
 
  class, functions as a template that defines the basic characteristics of a particular object. Here's an example:
 ```
@@ -36,15 +36,16 @@ Every method, included in the class definition passes the object in question as 
 Those used to object-oriented programming in other languages may be surprised by a few things. One is that Python has no real concept of private elements, so everything, by default, imitates the behavior of the C++/Java public keyword. For more information, see the "Private Class Members" example on this page.
 Some of the class's methods have the following form: __functionname__(self, other_stuff). All such methods are called "magic methods" and are an important part of classes in Python. For instance, operator overloading in Python is implemented with magic methods. For more information, see the relevant documentation.
 Now let's make a few instances of our Person class!
-
+```
 >>> # Instances
 >>> kelly = Person("Kelly")
 >>> joseph = Person("Joseph")
 >>> john_doe = Person("John Doe")
+```
 We currently have three Person objects, kelly, joseph, and john_doe.
 
 We can access the attributes of the class from each instance using the dot operator . Note again the difference between class and instance attributes:
-
+```
 >>> # Attributes
 >>> kelly.species
 'Homo Sapiens'
@@ -56,8 +57,9 @@ We can access the attributes of the class from each instance using the dot opera
 'Kelly'
 >>> joseph.name
 'Joseph'
+```
 We can execute the methods of the class using the same dot operator .:
-
+```
 >>> # Methods
 >>> john_doe.__str__()
 'John Doe'
@@ -66,6 +68,6 @@ We can execute the methods of the class using the same dot operator .:
 >>>  john_doe.rename("John")
 'Now my name is John'
 
-
+```
 
  
